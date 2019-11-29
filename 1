@@ -1,0 +1,13 @@
+Matamazom matamazomCreate() {
+    freeSetElements free = &freeInt;
+    copySetElements copy = &copyInt;
+    compareSetElements compare = &compareInts;
+    Matamazom new_warehouse = setCreate(copy, free, compare);
+    return new_warehouse;
+}
+
+void matamazomDestroy(Matamazom matamazom){
+    if(matamazom){
+        setDestroy(matamazom);
+    }
+}
